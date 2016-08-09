@@ -1,5 +1,6 @@
 package com.alexvinall.stringpermutations;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -36,9 +37,9 @@ public class StringPermutations {
     for (String string : strings) {
       String output = "";
       for (String possible : parse(string)) {
-        output += possible + ", ";
+        output += possible + ",";
       }
-      System.out.println(StringUtils.left(output, output.length() - 2));
+      System.out.println(StringUtils.left(output, output.length() - 1));
     }
   }
 
@@ -62,6 +63,7 @@ public class StringPermutations {
       }
     }
 
+    Collections.sort(permutations);
     return permutations;
   }
 }
