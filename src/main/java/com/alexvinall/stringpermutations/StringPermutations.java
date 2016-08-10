@@ -27,7 +27,7 @@ public class StringPermutations {
    * @param args the file to parse.
    */
   public static void main(String[] args) {
-    // TODO read file
+    // TODO read file and check it for errors, return a list of strings, throw exception if file invalid
     List<String> lines = Lists.newArrayList();
     parseLines(lines);
   }
